@@ -19,6 +19,7 @@ namespace CollabVM
 	{
 		db_ = new odb::sqlite::database(
 			"collab-vm.db", SQLITE_OPEN_READWRITE | SQLITE_OPEN_CREATE);
+		//change this to found that .db file.
 
 		odb::connection_ptr c(db_->connection());
 		c->execute("PRAGMA foreign_keys=OFF");
@@ -36,7 +37,7 @@ namespace CollabVM
 		{
 			odb::schema_catalog::create_schema(*db_);
 
-			std::cout << "A new database has been created" << std::endl;
+			std::cout << "New database has been created." << std::endl;
 		}
 
 		// Load server configuration from database
