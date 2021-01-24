@@ -441,9 +441,10 @@ void CollabVMServer::OnHttp(connection_hdl handle)
 	}
 	lock.unlock();
 
-	std::cout << "Requested resource: " << con->get_resource() << std::endl;
+	//We don't need this. :(
+	//std::cout << "Requested resource: " << con->get_resource() << std::endl;
 	if (con->get_request_body().length() > 0)
-		std::cout << "Request body: " << con->get_request_body() << std::endl;
+	//std::cout << "Request body: " << con->get_request_body() << std::endl;
 	// Get path to resource
 	std::string path = con->get_resource();
 	// The path should begin with a slash
